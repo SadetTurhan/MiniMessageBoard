@@ -4,15 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css"   href="/css/style.css">
     <title>Document</title>
 </head>
 <body>
-    <h1><%= title %></h1>
-    <p>Messages</p>
+
+    <h1 class="title"><%= title %></h1>
+    <button type="submit" class="addButton" id="addButton" onclick="hrefFunction()">Add a message</button>
+    
+    <p class="sideTitle">Messages</p>
     <% if (messages.length){ %>
-        <div></div>
+        <div class="container">
         <% for(let message of messages) { %>
-            <div>
+            <div class="messagesContainer">
                 <h3><%= message.text %></h3>
                 <h3><%= message.user %></h3>
                 <h3><%= message.added %></h3>
@@ -20,5 +24,17 @@
         <% }} else { %>
             <p>no messages yet</p>
             <% } %>
+        </div>
+        <script>
+             document.getElementById("addButton").addEventListener("click", redirectFunction);
+        
+        function redirectFunction(){
+            window.location.href = "http://localhost:3000/new"
+           
+            /*
+             * window.location.replace("https://www.example.com");
+             */
+        }
+        </script>
 </body>
 </html>
