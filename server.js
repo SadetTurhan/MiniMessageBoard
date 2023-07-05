@@ -1,0 +1,6 @@
+const express = require("express")
+const app = express()
+app.set("view engine", "ejs")
+const route = require("./routes/messages")
+app.use(route)
+app.listen(3000)
