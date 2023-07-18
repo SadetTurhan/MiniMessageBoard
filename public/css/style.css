@@ -32,8 +32,6 @@ body{
 }
 .deleteButton{
     background-color: rgba(173, 18, 18, 0.747);
-    width: 25%;
-    height: 25%;
     margin-bottom: 2%;
 }
 .author{
