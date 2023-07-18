@@ -18,13 +18,34 @@ body{
 .messagesContainer{
     display: flex;
     justify-content: flex-start;
+    align-items: center;
     flex-direction: column;
     margin: 2em;
     border: 2px solid black;
+    max-width: 20%;
 }
 .addButton{
     height: 3em;
     margin-top: 2em;
     position: absolute;
     left: 47.3%;
+}
+.deleteButton{
+    background-color: rgba(173, 18, 18, 0.747);
+    width: 25%;
+    height: 25%;
+    margin-bottom: 2%;
+}
+.author{
+    color: rgb(77, 76, 76);
+}
+.message{
+    word-wrap: break-word;
+    max-width: 80%;
+}
+.dateOfMessage{
+    width: 80%;
+}
+hr{
+    width: 80%;
 }

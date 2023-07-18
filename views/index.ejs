@@ -17,9 +17,12 @@
         <div class="container">
         <% for(let message of messages) { %>
             <div class="messagesContainer">
-                <h3><%= message.text %></h3>
-                <h3><%= message.user %></h3>
-                <h3><%= message.added %></h3>
+                <p class="author"><%= message.user %></p>
+                <hr>
+                <p class="message"><%= message.text %></p>
+                <hr>
+                <p class="dateOfMessage"><%= message.added %></p>
+                <button class="deleteButton">Delete</button>
             </div>
         <% }} else { %>
             <p>no messages yet</p>
@@ -30,10 +33,6 @@
         
         function redirectFunction(){
             window.location.href = "http://localhost:3000/new"
-           
-            /*
-             * window.location.replace("https://www.example.com");
-             */
         }
         </script>
 </body>
